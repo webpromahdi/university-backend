@@ -15,5 +15,3 @@ async function main() {
 }
 
 main();
-
-// mongodb+srv://admin_mahi:E7QT5H81i7LIA0GM@cluster0.yvhfr2x.mongodb.net/first-project?retryWrites=true&w=majority&appName=Cluster0

@@ -116,6 +116,10 @@ const studentSchema = new Schema<TStudent, StudentModel, StudentMethods>({
       message: (props) => `${props.value} is not a valid image URL!`,
     },
   },
+  admissionSemeter: {
+    type: Schema.Types.ObjectId,
+    ref: 'AcademicSemester',
+  },
   isDeleted: { type: Boolean, default: false },
 });
 

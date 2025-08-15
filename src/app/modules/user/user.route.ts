@@ -1,9 +1,15 @@
 import express from 'express';
 import { userControllers } from './user.controller';
 
+import { createStudentValidationSchema } from '../student/student.validation';
+import validateRequest from '../../middlewares/validateRequest';
+
 const router = express.Router();
 
-//will call controller func
-router.post('/create-student', userControllers.createStudent);
+router.post(
+  '/create-student',
+  validateRequest(createStudentValidationSchema),
+  userControllers.createStudent,
+);
 
 export const UserRoutes = router;
